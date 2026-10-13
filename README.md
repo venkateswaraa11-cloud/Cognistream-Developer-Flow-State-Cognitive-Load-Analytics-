@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cognistream
 ### Developer Flow State & Cognitive Load Analytics
 
@@ -29,3 +30,7 @@ An analytics workflow and interactive dashboard that summarize developer workflo
 
 ## Important Note
 Developer activity metrics are indirect indicators. They cannot independently measure a person's actual cognitive load or prove that someone is in a flow state.
+=======
+# Cognistream-Developer-Flow-State-Cognitive-Load-Analytics-
+Developer Flow State &amp; Cognitive Load Analytics using Python, SQL, and Power BI.
+>>>>>>> origin/main

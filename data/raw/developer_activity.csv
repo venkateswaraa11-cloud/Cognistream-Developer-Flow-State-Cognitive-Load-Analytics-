@@ -1,0 +1,6 @@
+event_id,timestamp,developer_id,source,event_type,duration_minutes
+EVT001,2026-10-01 09:00:00,DEV001,GitHub,Commit,15
+EVT002,2026-10-01 09:20:00,DEV001,Slack,Message,5
+EVT003,2026-10-01 09:30:00,DEV001,IDE,Coding,25
+EVT004,2026-10-01 10:00:00,DEV002,Jira,Task_Update,10
+EVT005,2026-10-01 10:15:00,DEV002,IDE,Coding,30

@@ -30,6 +30,9 @@ class TestAnalyzeInterruptions(unittest.TestCase):
         self.assertIn("Potential interruption events: 2", output)
         self.assertIn("Slack: 1", output)
         self.assertIn("Jira: 1", output)
+        self.assertIn("Potential interruptions by developer:", output)
+        self.assertIn("DEV001: 1", output)
+        self.assertIn("DEV002: 1", output)
 
 
 if __name__ == "__main__":

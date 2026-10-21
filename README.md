@@ -38,6 +38,7 @@ The interruption analysis currently classifies `Message` and `Task_Update` event
 It reports the total number of activity events, the number of potential interruption events, and their distribution by source.
 
 These classifications are analytical assumptions, not proof that every message or task update interrupted a developer's focus.
+The analysis also groups potential interruption events by developer ID to show how these events are distributed across developers in the synthetic dataset.
 
 ## Project Structure
 - `src/validate_activity.py` — validates the raw dataset.

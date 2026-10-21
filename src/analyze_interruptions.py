@@ -1,6 +1,7 @@
 
 import csv
 from pathlib import Path
+from collections import Counter
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
@@ -40,14 +41,20 @@ def analyze_interruptions():
     print(f"Potential interruption events: {len(interruptions)}")
 
     print("\nPotential interruptions by source:")
-    source_counts = {}
-
-    for row in interruptions:
-        source = row["source"].strip()
-        source_counts[source] = source_counts.get(source, 0) + 1
+    source_counts = Counter(
+        row["source"].strip() for row in interruptions
+    )
 
     for source, count in sorted(source_counts.items()):
         print(f"- {source}: {count}")
+
+    print("\nPotential interruptions by developer:")
+    developer_counts = Counter(
+        row["developer_id"].strip() for row in interruptions
+    )
+
+    for developer, count in sorted(developer_counts.items()):
+        print(f"- {developer}: {count}")
 
 
 if __name__ == "__main__":

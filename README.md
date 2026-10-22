@@ -29,8 +29,9 @@ CogniStream explores developer workflow patterns, activity events, interruptions
 - Activity data cleaning.
 - Cleaned dataset validation.
 - Basic activity analysis.
-- Potential interruption event analysis by source.
-- Unit test for interruption analysis.
+- Potential interruption event analysis by source and developer.
+- Coding event counts and recorded coding duration by developer.
+- Unit tests for interruption and coding activity analysis.
 
 ## Interruption Analysis
 The interruption analysis currently classifies `Message` and `Task_Update` event types as potential interruptions.
@@ -38,7 +39,15 @@ The interruption analysis currently classifies `Message` and `Task_Update` event
 It reports the total number of activity events, the number of potential interruption events, and their distribution by source.
 
 These classifications are analytical assumptions, not proof that every message or task update interrupted a developer's focus.
+
 The analysis also groups potential interruption events by developer ID to show how these events are distributed across developers in the synthetic dataset.
+
+## Coding Activity Analysis
+The coding activity analysis identifies records with the `Coding` event type.
+
+It reports the total number of activity events, the number of recorded coding events, the total recorded coding duration, and coding event counts and recorded duration by developer.
+
+These results describe the synthetic dataset and should not be interpreted as verified measurements of real developer productivity or time spent coding.
 
 ## Project Structure
 - `src/validate_activity.py` — validates the raw dataset.
@@ -46,7 +55,9 @@ The analysis also groups potential interruption events by developer ID to show h
 - `src/validate_cleaned_data.py` — validates cleaned data.
 - `src/analyze_activity.py` — summarizes activity records.
 - `src/analyze_interruptions.py` — summarizes potential interruption events.
+- `src/analyze_coding_activity.py` — summarizes coding events and recorded coding duration by developer.
 - `tests/test_analyze_interruptions.py` — tests interruption analysis.
+- `tests/test_analyze_coding_activity.py` — tests coding activity analysis.
 
 ## Data Integrity and Limitations
 The project currently uses synthetic activity data. Its results demonstrate the analysis workflow and must not be interpreted as verified measurements of real developer productivity, cognitive load, or flow state.

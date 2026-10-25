@@ -32,6 +32,7 @@ CogniStream explores developer workflow patterns, activity events, interruptions
 - Potential interruption event analysis by source and developer.
 - Coding event counts and recorded coding duration by developer.
 - Unit tests for interruption and coding activity analysis.
+- Coding activity analysis by hour, summarizing recorded coding duration according to each event's start hour.
 
 ## Interruption Analysis
 The interruption analysis currently classifies `Message` and `Task_Update` event types as potential interruptions.

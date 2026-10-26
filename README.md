@@ -33,7 +33,7 @@ CogniStream explores developer workflow patterns, activity events, interruptions
 - Coding event counts and recorded coding duration by developer.
 - Unit tests for interruption and coding activity analysis.
 - Coding activity analysis by hour, summarizing recorded coding duration according to each event's start hour.
-
+- Coding activity analysis by developer and hour, summarizing recorded coding duration for each developer during each event's start hour.
 ## Interruption Analysis
 The interruption analysis currently classifies `Message` and `Task_Update` event types as potential interruptions.
 
@@ -59,6 +59,8 @@ These results describe the synthetic dataset and should not be interpreted as ve
 - `src/analyze_coding_activity.py` — summarizes coding events and recorded coding duration by developer.
 - `tests/test_analyze_interruptions.py` — tests interruption analysis.
 - `tests/test_analyze_coding_activity.py` — tests coding activity analysis.
+- `src/analyze_coding_by_developer_hour.py` — summarizes coding duration by developer and event start hour.
+- `tests/test_analyze_coding_by_developer_hour.py` — tests coding activity analysis by developer and hour.
 
 ## Data Integrity and Limitations
 The project currently uses synthetic activity data. Its results demonstrate the analysis workflow and must not be interpreted as verified measurements of real developer productivity, cognitive load, or flow state.

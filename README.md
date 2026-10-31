@@ -23,15 +23,21 @@ CogniStream explores developer workflow patterns, activity events, interruptions
 - **Dashboard Visualization:** Tremor.js
 - **Version Control:** Git and GitHub
 
-## Current Features
+#### Current Features
+
 - Synthetic developer activity dataset.
-- Raw dataset validation.
-- Activity data cleaning.
+- Raw dataset validation and data quality checks.
+- Activity data cleaning and preprocessing.
 - Cleaned dataset validation.
-- Basic activity analysis.
-- Potential interruption event analysis by source.
-- Unit test for interruption analysis.
+- Developer activity and coding duration analysis.
+- Hourly coding activity analysis.
+- Developer-wise coding activity comparison.
+- Potential interruption event analysis by source and hour.
 - Developer-level hourly analysis combining recorded coding activity and potential interruption events.
+- Consolidated developer activity reports with CSV export.
+- SQLite database integration for structured activity data storage.
+- SQL-based developer analytics using aggregation and conditional calculations.
+- Automated unit testing with **15 passing tests**.
 
 ## Interruption Analysis
 The interruption analysis currently classifies `Message` and `Task_Update` event types as potential interruptions.

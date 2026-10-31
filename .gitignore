@@ -21,3 +21,4 @@ outputs/
 # Operating system files
 .DS_Store
 Thumbs.db
+data/processed/cognistream.db
